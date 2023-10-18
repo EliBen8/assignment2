@@ -1,0 +1,10 @@
+elibendavid@Elis-MacBook-Pro docs % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 504 bytes | 504.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/EliBen8/assignment2.git
+   0def852..dafa998  master -> master
