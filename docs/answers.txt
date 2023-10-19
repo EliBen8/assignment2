@@ -152,10 +152,10 @@ Date:   Wed Sep 25 18:33:08 2019 -0400
 9) What is the main difference between the “Dictator and Lieutenants” workflow and the 
    “Integration manager” workflow?
 
-In both the 'Directoy and Liutenants' and the 'Integration Manager' workflows there is
-a central/blessed repository. In the 'Directoy and Liutenants' workflow, programmers
+In both the 'Director and Lieutenants' and the 'Integration Manager' workflows there is
+a central/blessed repository. In the 'Director and Lieutenants' workflow, programmers
 pull from the central/blessed repository. The programmers changes are then reviewed by
-the liutenants. If they are approved, they are sent to the director, who integrates the
+the lieutenants. If they are approved, they are sent to the director, who integrates the
 changes to the central/blessed repository. Only the director can push to the blessed
 repository.
 In the 'Integration Manager' workflow, developers pull from the blessed repository
@@ -169,8 +169,8 @@ integration conflict resolutions and pushes to the blessed repository.
 
 A team of 100 developers would benefit more from the 'Director and Lieutenants' workflow
 than the 'Centralized' workflow. With a large number of developers, the Centralized
-workflow would be messy. the director and lieutenants workflow would deal with conflics
+workflow would be messy. the director and lieutenants workflow would deal with conflicts
 much better. Having lieutenants checking each push is also more efficient than attempting
-to have 100 developers communticate to resolve an issue with 1 developers code.
+to have 100 developers communicate to resolve an issue with 1 developers code.
 
 =======================================================================================
