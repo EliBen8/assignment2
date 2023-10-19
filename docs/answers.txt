@@ -1,0 +1,176 @@
+ELi Bendavid
+CEN 4020
+Dr. Gaitros
+=======================================================================================
+Git Lab Tutorials:
+	Main - Introduction Sequence: Completed on 10/17/2023
+	Remotes - Push & Pull: Completed on 10/18/2023
+
+GitHub Account Setup:
+	GitHub Account Created on 08/01/2021 (rough estimate)
+
+Set Up:
+	GitHub Repository for this assignment: https://github.com/EliBen8/assignment2
+
+=======================================================================================
+
+1) Paste the console output you saved at the end of step 3.C (2 points)
+
+elibendavid@Elis-MacBook-Pro docs % git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 504 bytes | 504.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/EliBen8/assignment2.git
+   0def852..dafa998  master -> master
+ 
+----------------------------------------------------------------------------------------
+
+2) How many commits have been done to the repository (not only by you, but by anyone)
+   so far? Write the git command you used to get this information.
+
+The number of commits done to the file, not just by me but by everyone, is 10. The 
+command used was: git rev-list –count HEAD
+
+----------------------------------------------------------------------------------------
+
+3) When was the README.md  file modified last? Write the git command you used to get
+   this information
+
+The command to check that date of the last modification made to ‘README.md’ is:
+git log -n 1 --format="%ad" -- README.md
+
+This command outputted:
+‘Wed Oct 18 09:22:44 2023 -0400’ 
+
+----------------------------------------------------------------------------------------
+
+4) Mention two reasons why branches are used in a Git repository
+
+Branches are used in Git repositories because they allow programmers to make individual
+changes to their project without messing up the main branch. An individual can make a 
+branch to test a new functions functionality before implementing it to the functional
+main program. It is important to ensure a branch works perfectly before incorporating it
+in the main program.  
+
+----------------------------------------------------------------------------------------
+
+5) What is the difference between git log and git status?
+
+‘git log’ is used to display the commit history in a Git repository. ‘git status’ is 
+used to show information about the working directory.
+
+----------------------------------------------------------------------------------------
+
+6) What command would you use to see the commits where “Vehicle.h” was one of the
+   committed files?
+
+The command to see the commits where “Vehicle.h” was one of the commited files is:
+
+git log Vehicle.h
+
+The output is:
+
+commit 03106e92a1e36708334c69dd071088c6d0937b1d
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 11 16:58:59 2019 -0400
+
+    -> Declared the trivial destructors for all classes
+    -> Fully formatted toString methods for all classes
+    -> Added test cases in the main method for testing the implementations
+    -> Added validation on value for engine sizes in the  Car class
+
+commit f9cd890b3f89fbe5920a1fdf7da34ee915ba27b9
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:42:39 2019 -0400
+
+    -> Partial implementation of PoweredVehicle and Car
+    -> Definition of virtual functions
+
+commit f9c24b027e6275ff6a1911241014c44971b4e8d0
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 18:04:36 2019 -0400
+
+    Refactored Vehicle class to separate definition and declarations
+    Added mileageEstimate abstract method to Vehicle
+    Implemented the Bicycle class
+
+commit 4f6c88c953f4601929df7980a19dcdaee4f13854
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Thu Sep 5 14:59:19 2019 -0400
+
+    Base Vehicle class created
+
+----------------------------------------------------------------------------------------
+
+7) What command would you use to see the commits whose commit message contains the word 
+   “file”?
+
+A command to see the commits whose commit message contains the word “file” is:
+
+git log --grep="file"
+
+The output is:
+
+commit a42f966accdec6b714234f2b09883aba4da4989e (HEAD -> master, origin/master, origin/HEAD)
+Author: EliBen8 <elibendavid8@gmail.com>
+Date:   Wed Oct 18 15:44:59 2023 -0400
+
+    Created an empty file named 'answers.txt'
+
+commit 5a6aeab25da9d1d0fbb49907458c78a1ae2463ff
+Author: EliBen8 <elibendavid8@gmail.com>
+Date:   Wed Oct 18 15:42:06 2023 -0400
+
+    Created 'tempoutput.txt and pasted the output of my console after I pushed my changes. 
+This file can be found in the 'docs' folder
+
+commit f4975e5d56ff331762b318bfd12c5236e0299f25
+Author: Esteban Parra <estebanpr014@gmail.com>
+Date:   Wed Sep 25 18:33:08 2019 -0400
+
+    -> Adding an empty README.md file
+
+----------------------------------------------------------------------------------------
+
+8) In the context of object-oriented programming (I) What is inheritance? (II) What is 
+   polymorphism? (III) What is encapsulation?
+
+	--Inheritance is the idea that new data types can be defined as extensions of 
+	  previously defined types.
+ 
+	--Polymorphism is the concept of using different classes with the same interface. 
+
+	--Encapsulation is the bundling of data and methods operating on this data into
+	  one unit.
+
+----------------------------------------------------------------------------------------
+
+9) What is the main difference between the “Dictator and Lieutenants” workflow and the 
+   “Integration manager” workflow?
+
+In both the 'Directoy and Liutenants' and the 'Integration Manager' workflows there is
+a central/blessed repository. In the 'Directoy and Liutenants' workflow, programmers
+pull from the central/blessed repository. The programmers changes are then reviewed by
+the liutenants. If they are approved, they are sent to the director, who integrates the
+changes to the central/blessed repository. Only the director can push to the blessed
+repository.
+In the 'Integration Manager' workflow, developers pull from the blessed repository
+and push to their own public repository. The integration manager then deals with
+integration conflict resolutions and pushes to the blessed repository.
+
+----------------------------------------------------------------------------------------
+
+10) How would a team of 100 developers benefit from following the “Dictator and Lieutenants” 
+    workflow instead of the “Centralized” workflow?
+
+A team of 100 developers would benefit more from the 'Director and Lieutenants' workflow
+than the 'Centralized' workflow. With a large number of developers, the Centralized
+workflow would be messy. the director and lieutenants workflow would deal with conflics
+much better. Having lieutenants checking each push is also more efficient than attempting
+to have 100 developers communticate to resolve an issue with 1 developers code.
+
+=======================================================================================
